@@ -1,0 +1,28 @@
+﻿<Page x:Class="Gai.Pages.LoginPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Gai.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="650" d:DesignWidth="1000"
+      Title="LoginPage">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1">
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <TextBlock Width="70" Margin="5">Логин:</TextBlock>
+                <TextBox Width="120" Height="30" x:Name="TboxLogin"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <TextBlock Width="70" Margin="5">Пароль:</TextBlock>
+                <TextBox Width="120" Height="30" x:Name="TboxPassword"></TextBox>
+            </StackPanel>
+            <Button Width="200" Height="30" Background="#FFE0A9AF" Content="Войти" x:Name="BtnLogin" Click="BtnLogin_Click"></Button>
+        </StackPanel>
+    </Grid>
+</Page>

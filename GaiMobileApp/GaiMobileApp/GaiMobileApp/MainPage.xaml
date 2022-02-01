@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GaiMobileApp.MainPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" BackgroundColor="#FFD1EEFC"></Grid>
+        <Grid Grid.Row="2" BackgroundColor="#FFD1EEFC"></Grid>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" VerticalOptions="Center" Grid.Row="0" Margin="5">
+            <Image Source="Resourse/gibdd_logo.png" WidthRequest="50" HeightRequest="30"></Image>
+        </StackLayout>
+        <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="1">
+            <Button x:Name="BtnProsmotrDtp" WidthRequest="200" HeightRequest="30" Margin="5" Background="#FFE0A9AF" Text="Список ДТП" Clicked="BtnProsmotrDtp_Clicked"></Button>
+            <Button x:Name="BtnAddDtp" WidthRequest="200" HeightRequest="30" Margin="5" Background="#FFE0A9AF" Text="Добавить ДТП" Clicked="BtnAddDtp_Clicked"></Button>
+            
+        </StackLayout>
+    </Grid>
+
+</ContentPage>

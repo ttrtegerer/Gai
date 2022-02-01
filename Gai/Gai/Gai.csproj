@@ -1,0 +1,395 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4D85CABD-2368-4561-9E84-45B0DC1DDF28}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Gai</RootNamespace>
+    <AssemblyName>Gai</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entitis\categories.cs">
+      <DependentUpon>DbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entitis\DbModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entitis\DbModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entitis\DbModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Entitis\drivers.cs">
+      <DependentUpon>DbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entitis\licence.cs">
+      <DependentUpon>DbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entitis\status.cs">
+      <DependentUpon>DbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Pages\AddLichec.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\AddVoditelPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\InfoOfVoditelPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\LichesPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\LoginPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Pages\AddLichec.xaml.cs">
+      <DependentUpon>AddLichec.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AddVoditelPage.xaml.cs">
+      <DependentUpon>AddVoditelPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\InfoOfVoditelPage.xaml.cs">
+      <DependentUpon>InfoOfVoditelPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\LichesPage.xaml.cs">
+      <DependentUpon>LichesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\LoginPage.xaml.cs">
+      <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EntityDeploy Include="Entitis\DbModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DbModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Entitis\DbModel.edmx.diagram">
+      <DependentUpon>DbModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resourse\gibdd_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Entitis\DbModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DbModel.Context.cs</LastGenOutput>
+      <DependentUpon>DbModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="Entitis\DbModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DbModel.edmx</DependentUpon>
+      <LastGenOutput>DbModel.cs</LastGenOutput>
+    </Content>
+    <Resource Include="Pages\Photo\001-happy-18.png" />
+    <Resource Include="Pages\Photo\002-cool-5.png" />
+    <Resource Include="Pages\Photo\003-happy-17.png" />
+    <Resource Include="Pages\Photo\004-surprised-9.png" />
+    <Resource Include="Pages\Photo\005-shocked-4.png" />
+    <Resource Include="Pages\Photo\006-shocked-3.png" />
+    <Resource Include="Pages\Photo\007-nervous-2.png" />
+    <Resource Include="Pages\Photo\008-nervous-1.png" />
+    <Resource Include="Pages\Photo\009-angry-6.png" />
+    <Resource Include="Pages\Photo\010-drool.png" />
+    <Resource Include="Pages\Photo\011-tired-2.png" />
+    <Resource Include="Pages\Photo\012-tongue-7.png" />
+    <Resource Include="Pages\Photo\013-tongue-6.png" />
+    <Resource Include="Pages\Photo\014-tongue-5.png" />
+    <Resource Include="Pages\Photo\015-smile-1.png" />
+    <Resource Include="Pages\Photo\016-sleeping-1.png" />
+    <Resource Include="Pages\Photo\017-nervous.png" />
+    <Resource Include="Pages\Photo\018-surprised-8.png" />
+    <Resource Include="Pages\Photo\019-tongue-4.png" />
+    <Resource Include="Pages\Photo\020-happy-16.png" />
+    <Resource Include="Pages\Photo\021-wink-1.png" />
+    <Resource Include="Pages\Photo\022-laughing-2.png" />
+    <Resource Include="Pages\Photo\023-laughing-1.png" />
+    <Resource Include="Pages\Photo\024-sweat-1.png" />
+    <Resource Include="Pages\Photo\025-happy-15.png" />
+    <Resource Include="Pages\Photo\026-happy-14.png" />
+    <Resource Include="Pages\Photo\027-laughing.png" />
+    <Resource Include="Pages\Photo\028-happy-13.png" />
+    <Resource Include="Pages\Photo\029-happy-12.png" />
+    <Resource Include="Pages\Photo\030-crying-8.png" />
+    <Resource Include="Pages\Photo\031-crying-7.png" />
+    <Resource Include="Pages\Photo\032-bored.png" />
+    <Resource Include="Pages\Photo\033-cool-4.png" />
+    <Resource Include="Pages\Photo\034-angry-5.png" />
+    <Resource Include="Pages\Photo\035-sad-14.png" />
+    <Resource Include="Pages\Photo\036-angry-4.png" />
+    <Resource Include="Pages\Photo\037-happy-11.png" />
+    <Resource Include="Pages\Photo\038-angry-3.png" />
+    <Resource Include="Pages\Photo\039-cyclops-1.png" />
+    <Resource Include="Pages\Photo\040-surprised-7.png" />
+    <Resource Include="Pages\Photo\041-thinking-2.png" />
+    <Resource Include="Pages\Photo\042-book.png" />
+    <Resource Include="Pages\Photo\043-baby-boy.png" />
+    <Resource Include="Pages\Photo\044-dead-1.png" />
+    <Resource Include="Pages\Photo\045-star.png" />
+    <Resource Include="Pages\Photo\046-dubious.png" />
+    <Resource Include="Pages\Photo\047-phone-call.png" />
+    <Resource Include="Pages\Photo\048-moon.png" />
+    <Resource Include="Pages\Photo\049-robot.png" />
+    <Resource Include="Pages\Photo\050-flower.png" />
+    <Resource Include="Pages\Photo\051-happy-10.png" />
+    <Resource Include="Pages\Photo\052-happy-9.png" />
+    <Resource Include="Pages\Photo\053-tired-1.png" />
+    <Resource Include="Pages\Photo\054-ugly-3.png" />
+    <Resource Include="Pages\Photo\055-tongue-3.png" />
+    <Resource Include="Pages\Photo\056-vampire.png" />
+    <Resource Include="Pages\Photo\057-music-1.png" />
+    <Resource Include="Pages\Photo\058-popcorn.png" />
+    <Resource Include="Pages\Photo\059-nurse.png" />
+    <Resource Include="Pages\Photo\060-sad-13.png" />
+    <Resource Include="Pages\Photo\061-graduated-1.png" />
+    <Resource Include="Pages\Photo\062-happy-8.png" />
+    <Resource Include="Pages\Photo\063-hungry.png" />
+    <Resource Include="Pages\Photo\064-police.png" />
+    <Resource Include="Pages\Photo\065-crying-6.png" />
+    <Resource Include="Pages\Photo\066-happy-7.png" />
+    <Resource Include="Pages\Photo\067-sun.png" />
+    <Resource Include="Pages\Photo\068-father-2.png" />
+    <Resource Include="Pages\Photo\069-happy-6.png" />
+    <Resource Include="Pages\Photo\070-late.png" />
+    <Resource Include="Pages\Photo\071-heart.png" />
+    <Resource Include="Pages\Photo\072-sick-3.png" />
+    <Resource Include="Pages\Photo\073-sad-12.png" />
+    <Resource Include="Pages\Photo\074-in-love-10.png" />
+    <Resource Include="Pages\Photo\075-shocked-2.png" />
+    <Resource Include="Pages\Photo\076-happy-5.png" />
+    <Resource Include="Pages\Photo\077-shocked-1.png" />
+    <Resource Include="Pages\Photo\078-cool-3.png" />
+    <Resource Include="Pages\Photo\079-crying-5.png" />
+    <Resource Include="Pages\Photo\080-zombie.png" />
+    <Resource Include="Pages\Photo\081-pain.png" />
+    <Resource Include="Pages\Photo\082-cyclops.png" />
+    <Resource Include="Pages\Photo\083-sweat.png" />
+    <Resource Include="Pages\Photo\084-thief.png" />
+    <Resource Include="Pages\Photo\085-sad-11.png" />
+    <Resource Include="Pages\Photo\086-kiss-4.png" />
+    <Resource Include="Pages\Photo\087-father-1.png" />
+    <Resource Include="Pages\Photo\088-father.png" />
+    <Resource Include="Pages\Photo\089-angel-1.png" />
+    <Resource Include="Pages\Photo\090-happy-4.png" />
+    <Resource Include="Pages\Photo\091-sad-10.png" />
+    <Resource Include="Pages\Photo\092-outrage-1.png" />
+    <Resource Include="Pages\Photo\093-ugly-2.png" />
+    <Resource Include="Pages\Photo\094-ugly-1.png" />
+    <Resource Include="Pages\Photo\095-scared.png" />
+    <Resource Include="Pages\Photo\096-tongue-2.png" />
+    <Resource Include="Pages\Photo\097-sad-9.png" />
+    <Resource Include="Pages\Photo\098-nerd-9.png" />
+    <Resource Include="Pages\Photo\099-greed-2.png" />
+    <Resource Include="Pages\Photo\100-whistle.png" />
+    <Resource Include="Pages\Photo\101-nerd-8.png" />
+    <Resource Include="Pages\Photo\102-muted-4.png" />
+    <Resource Include="Pages\Photo\103-in-love-9.png" />
+    <Resource Include="Pages\Photo\104-in-love-8.png" />
+    <Resource Include="Pages\Photo\105-kiss-3.png" />
+    <Resource Include="Pages\Photo\106-in-love-7.png" />
+    <Resource Include="Pages\Photo\107-ugly.png" />
+    <Resource Include="Pages\Photo\108-nerd-7.png" />
+    <Resource Include="Pages\Photo\109-nerd-6.png" />
+    <Resource Include="Pages\Photo\110-crying-4.png" />
+    <Resource Include="Pages\Photo\111-muted-3.png" />
+    <Resource Include="Pages\Photo\112-nerd-5.png" />
+    <Resource Include="Pages\Photo\113-kiss-2.png" />
+    <Resource Include="Pages\Photo\114-greed-1.png" />
+    <Resource Include="Pages\Photo\115-pirate-1.png" />
+    <Resource Include="Pages\Photo\116-music.png" />
+    <Resource Include="Pages\Photo\117-confused-2.png" />
+    <Resource Include="Pages\Photo\118-nerd-4.png" />
+    <Resource Include="Pages\Photo\119-greed.png" />
+    <Resource Include="Pages\Photo\120-nerd-3.png" />
+    <Resource Include="Pages\Photo\121-crying-3.png" />
+    <Resource Include="Pages\Photo\122-cheering.png" />
+    <Resource Include="Pages\Photo\123-surprised-6.png" />
+    <Resource Include="Pages\Photo\124-muted-2.png" />
+    <Resource Include="Pages\Photo\125-sick-2.png" />
+    <Resource Include="Pages\Photo\126-graduated.png" />
+    <Resource Include="Pages\Photo\127-angry-2.png" />
+    <Resource Include="Pages\Photo\128-in-love-6.png" />
+    <Resource Include="Pages\Photo\129-cool-2.png" />
+    <Resource Include="Pages\Photo\130-confused-1.png" />
+    <Resource Include="Pages\Photo\131-sad-8.png" />
+    <Resource Include="Pages\Photo\132-nerd-2.png" />
+    <Resource Include="Pages\Photo\133-birthday-boy.png" />
+    <Resource Include="Pages\Photo\134-surprised-5.png" />
+    <Resource Include="Pages\Photo\135-selfie.png" />
+    <Resource Include="Pages\Photo\136-tongue-1.png" />
+    <Resource Include="Pages\Photo\137-smart-1.png" />
+    <Resource Include="Pages\Photo\138-smart.png" />
+    <Resource Include="Pages\Photo\139-surprised-4.png" />
+    <Resource Include="Pages\Photo\140-3d-glasses.png" />
+    <Resource Include="Pages\Photo\141-in-love-5.png" />
+    <Resource Include="Pages\Photo\142-sleeping.png" />
+    <Resource Include="Pages\Photo\143-pirate.png" />
+    <Resource Include="Pages\Photo\144-santa-claus.png" />
+    <Resource Include="Pages\Photo\145-wink.png" />
+    <Resource Include="Pages\Photo\146-in-love-4.png" />
+    <Resource Include="Pages\Photo\147-tired.png" />
+    <Resource Include="Pages\Photo\148-bang.png" />
+    <Resource Include="Pages\Photo\149-baby.png" />
+    <Resource Include="Pages\Photo\150-tongue.png" />
+    <Resource Include="Pages\Photo\151-sick-1.png" />
+    <Resource Include="Pages\Photo\152-outrage.png" />
+    <Resource Include="Pages\Photo\153-injury.png" />
+    <Resource Include="Pages\Photo\154-dead.png" />
+    <Resource Include="Pages\Photo\155-rich-1.png" />
+    <Resource Include="Pages\Photo\156-sick.png" />
+    <Resource Include="Pages\Photo\157-angel.png" />
+    <Resource Include="Pages\Photo\158-nerd-1.png" />
+    <Resource Include="Pages\Photo\159-crying-2.png" />
+    <Resource Include="Pages\Photo\160-crying-1.png" />
+    <Resource Include="Pages\Photo\161-muted-1.png" />
+    <Resource Include="Pages\Photo\162-surprised-3.png" />
+    <Resource Include="Pages\Photo\163-crying.png" />
+    <Resource Include="Pages\Photo\164-sad-7.png" />
+    <Resource Include="Pages\Photo\165-cool-1.png" />
+    <Resource Include="Pages\Photo\166-happy-3.png" />
+    <Resource Include="Pages\Photo\167-thinking-1.png" />
+    <Resource Include="Pages\Photo\168-muted.png" />
+    <Resource Include="Pages\Photo\169-confused.png" />
+    <Resource Include="Pages\Photo\170-happy-2.png" />
+    <Resource Include="Pages\Photo\171-thinking.png" />
+    <Resource Include="Pages\Photo\172-nerd.png" />
+    <Resource Include="Pages\Photo\173-in-love-3.png" />
+    <Resource Include="Pages\Photo\174-hypnotized.png" />
+    <Resource Include="Pages\Photo\175-cool.png" />
+    <Resource Include="Pages\Photo\176-shocked.png" />
+    <Resource Include="Pages\Photo\177-easter.png" />
+    <Resource Include="Pages\Photo\178-surprised-2.png" />
+    <Resource Include="Pages\Photo\179-surprised-1.png" />
+    <Resource Include="Pages\Photo\180-surprised.png" />
+    <Resource Include="Pages\Photo\181-furious.png" />
+    <Resource Include="Pages\Photo\182-sad-6.png" />
+    <Resource Include="Pages\Photo\183-sad-5.png" />
+    <Resource Include="Pages\Photo\184-sad-4.png" />
+    <Resource Include="Pages\Photo\185-sad-3.png" />
+    <Resource Include="Pages\Photo\186-angry-1.png" />
+    <Resource Include="Pages\Photo\187-rich.png" />
+    <Resource Include="Pages\Photo\188-sad-2.png" />
+    <Resource Include="Pages\Photo\189-happy-1.png" />
+    <Resource Include="Pages\Photo\190-sad-1.png" />
+    <Resource Include="Pages\Photo\191-sad.png" />
+    <Resource Include="Pages\Photo\192-smile.png" />
+    <Resource Include="Pages\Photo\193-in-love-2.png" />
+    <Resource Include="Pages\Photo\194-happy.png" />
+    <Resource Include="Pages\Photo\195-kiss-1.png" />
+    <Resource Include="Pages\Photo\196-in-love-1.png" />
+    <Resource Include="Pages\Photo\197-in-love.png" />
+    <Resource Include="Pages\Photo\198-kiss.png" />
+    <Resource Include="Pages\Photo\199-angry.png" />
+    <Resource Include="Pages\Photo\200-sleepy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

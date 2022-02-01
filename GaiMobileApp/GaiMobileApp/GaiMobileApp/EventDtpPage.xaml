@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GaiMobileApp.EventDtpPage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" BackgroundColor="#FFD1EEFC"></Grid>
+            <Grid Grid.Row="2" BackgroundColor="#FFD1EEFC"></Grid>
+            
+            <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" VerticalOptions="Center" Grid.Row="0" Margin="5">
+                <Image Source="Resourse/gibdd_logo.png" WidthRequest="50" HeightRequest="30"></Image>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Grid.Row="1"> 
+                <Label WidthRequest="400" >Дата:</Label>
+                <Label WidthRequest="270">Количество жертв:</Label>
+                <Label WidthRequest="300">Классификация:</Label>
+                <Label WidthRequest="300">Количество участников:</Label>
+            </StackLayout>
+            <StackLayout  Grid.Row="1" Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
+                <Label HorizontalOptions="Center">ДТП</Label>
+                <ListView x:Name="LvEventsDtp" ItemsSource="{Binding}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ViewCell.View>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <Label Text="{Binding Date}" FontSize="Medium" Grid.Column="0" />
+                                        <Label Text="{Binding KolvoZhertv}" FontSize="Medium" Grid.Column="1" />
+                                        <Label Text="{Binding Classification}" FontSize="Medium" Grid.Column="2" />
+                                        <Label Text="{Binding KolvoYthastnikov}" FontSize="Medium" Grid.Column="3" />
+                                    </Grid>
+                                </ViewCell.View>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+
+
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

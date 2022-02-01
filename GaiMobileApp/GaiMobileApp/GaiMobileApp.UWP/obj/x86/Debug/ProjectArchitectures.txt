@@ -1,0 +1,1 @@
+C:\Gai\GaiMobileApp\GaiMobileApp\GaiMobileApp.UWP\GaiMobileApp.UWP.csproj;x86

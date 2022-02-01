@@ -1,0 +1,10 @@
+C:\ФНЧ 2019 ГИБДД\ФНЧ 2019 сбор\Ресурсы\LibraryTestApp09\Библиотеки\VIN_LIB\VIN_LIB\obj\Debug\VIN_LIB.csproj.AssemblyReference.cache
+C:\ФНЧ 2019 ГИБДД\ФНЧ 2019 сбор\Ресурсы\LibraryTestApp09\Библиотеки\VIN_LIB\VIN_LIB\obj\Debug\VIN_LIB.csproj.CoreCompileInputs.cache
+C:\Gai\Libraries\VIN_LIB\VIN_LIB\bin\Debug\VIN_LIB.dll
+C:\Gai\Libraries\VIN_LIB\VIN_LIB\bin\Debug\VIN_LIB.pdb
+C:\Gai\Libraries\VIN_LIB\VIN_LIB\bin\Debug\StarkbankEcdsa.dll
+C:\Gai\Libraries\VIN_LIB\VIN_LIB\obj\Debug\VIN_LIB.csproj.AssemblyReference.cache
+C:\Gai\Libraries\VIN_LIB\VIN_LIB\obj\Debug\VIN_LIB.csproj.CoreCompileInputs.cache
+C:\Gai\Libraries\VIN_LIB\VIN_LIB\obj\Debug\VIN_LIB.csproj.CopyComplete
+C:\Gai\Libraries\VIN_LIB\VIN_LIB\obj\Debug\VIN_LIB.dll
+C:\Gai\Libraries\VIN_LIB\VIN_LIB\obj\Debug\VIN_LIB.pdb

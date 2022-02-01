@@ -1,0 +1,6 @@
+C:\Gai\Libraries\REG_MARK_LIB\REG_MARK_LIB\REG_MARK_LIB\bin\Debug\REG_MARK_LIB.dll
+C:\Gai\Libraries\REG_MARK_LIB\REG_MARK_LIB\REG_MARK_LIB\bin\Debug\REG_MARK_LIB.pdb
+C:\Gai\Libraries\REG_MARK_LIB\REG_MARK_LIB\REG_MARK_LIB\obj\Debug\REG_MARK_LIB.csproj.AssemblyReference.cache
+C:\Gai\Libraries\REG_MARK_LIB\REG_MARK_LIB\REG_MARK_LIB\obj\Debug\REG_MARK_LIB.csproj.CoreCompileInputs.cache
+C:\Gai\Libraries\REG_MARK_LIB\REG_MARK_LIB\REG_MARK_LIB\obj\Debug\REG_MARK_LIB.dll
+C:\Gai\Libraries\REG_MARK_LIB\REG_MARK_LIB\REG_MARK_LIB\obj\Debug\REG_MARK_LIB.pdb

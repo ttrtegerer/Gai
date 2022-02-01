@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище GaiDbModelContainer" CdmEntityContainer="GaiDbEntities">
+    <EntitySetMapping Name="categories">
+      <EntityTypeMapping TypeName="GaiDbModel.categories">
+        <MappingFragment StoreEntitySet="Gai-categories">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="drivers">
+      <EntityTypeMapping TypeName="GaiDbModel.drivers">
+        <MappingFragment StoreEntitySet="Gai-drivers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Sername" ColumnName="Sername" />
+          <ScalarProperty Name="Middlename" ColumnName="Middlename" />
+          <ScalarProperty Name="PasportSeria" ColumnName="PasportSeria" />
+          <ScalarProperty Name="PasportNumber" ColumnName="PasportNumber" />
+          <ScalarProperty Name="Postcode" ColumnName="Postcode" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="AddresLife" ColumnName="AddresLife" />
+          <ScalarProperty Name="Company" ColumnName="Company" />
+          <ScalarProperty Name="Jobname" ColumnName="Jobname" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="licence">
+      <EntityTypeMapping TypeName="GaiDbModel.licence">
+        <MappingFragment StoreEntitySet="Gai-licence">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="LicenceSeries" ColumnName="LicenceSeries" />
+          <ScalarProperty Name="LicenceNumber" ColumnName="LicenceNumber" />
+          <ScalarProperty Name="LicenceDate" ColumnName="LicenceDate" />
+          <ScalarProperty Name="ExpireDate" ColumnName="ExpireDate" />
+          <ScalarProperty Name="Driverid" ColumnName="Driverid" />
+          <ScalarProperty Name="Categories" ColumnName="Categories" />
+          <ScalarProperty Name="Statys" ColumnName="Statys" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="status">
+      <EntityTypeMapping TypeName="GaiDbModel.status">
+        <MappingFragment StoreEntitySet="Gai-status">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

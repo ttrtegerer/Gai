@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище GaiDbModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Gai-categories">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Comment" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="Gai-drivers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Sername" Type="varchar" MaxLength="50" />
+    <Property Name="Middlename" Type="varchar" MaxLength="50" />
+    <Property Name="PasportSeria" Type="int" />
+    <Property Name="PasportNumber" Type="int" />
+    <Property Name="Postcode" Type="int" />
+    <Property Name="Address" Type="varchar" MaxLength="50" />
+    <Property Name="AddresLife" Type="varchar" MaxLength="50" />
+    <Property Name="Company" Type="varchar" MaxLength="50" />
+    <Property Name="Jobname" Type="varchar" MaxLength="50" />
+    <Property Name="Phone" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="Photo" Type="varchar" MaxLength="50" />
+    <Property Name="Description" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Gai-licence">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LicenceSeries" Type="int" Nullable="false" />
+    <Property Name="LicenceNumber" Type="int" Nullable="false" />
+    <Property Name="LicenceDate" Type="date" Nullable="false" />
+    <Property Name="ExpireDate" Type="date" Nullable="false" />
+    <Property Name="Driverid" Type="int" Nullable="false" />
+    <Property Name="Categories" Type="int" Nullable="false" />
+    <Property Name="Statys" Type="int" />
+    <Property Name="Comment" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Gai-status">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_Gai-licence_Gai-categories">
+    <End Role="Gai-categories" Type="Self.Gai-categories" Multiplicity="1" />
+    <End Role="Gai-licence" Type="Self.Gai-licence" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Gai-categories">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Gai-licence">
+        <PropertyRef Name="Categories" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Gai-licence_Gai-drivers">
+    <End Role="Gai-drivers" Type="Self.Gai-drivers" Multiplicity="1" />
+    <End Role="Gai-licence" Type="Self.Gai-licence" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Gai-drivers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Gai-licence">
+        <PropertyRef Name="Driverid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Gai-licence_Gai-status">
+    <End Role="Gai-status" Type="Self.Gai-status" Multiplicity="0..1" />
+    <End Role="Gai-licence" Type="Self.Gai-licence" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Gai-status">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Gai-licence">
+        <PropertyRef Name="Statys" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище GaiDbModelContainer">
+    <EntitySet Name="Gai-categories" EntityType="Self.Gai-categories" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Gai-drivers" EntityType="Self.Gai-drivers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Gai-licence" EntityType="Self.Gai-licence" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Gai-status" EntityType="Self.Gai-status" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Gai-licence_Gai-categories" Association="Self.FK_Gai-licence_Gai-categories">
+      <End Role="Gai-categories" EntitySet="Gai-categories" />
+      <End Role="Gai-licence" EntitySet="Gai-licence" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Gai-licence_Gai-drivers" Association="Self.FK_Gai-licence_Gai-drivers">
+      <End Role="Gai-drivers" EntitySet="Gai-drivers" />
+      <End Role="Gai-licence" EntitySet="Gai-licence" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Gai-licence_Gai-status" Association="Self.FK_Gai-licence_Gai-status">
+      <End Role="Gai-status" EntitySet="Gai-status" />
+      <End Role="Gai-licence" EntitySet="Gai-licence" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

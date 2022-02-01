@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GaiMobileApp.AddDtpPage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition Height="40"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" BackgroundColor="#FFD1EEFC"></Grid>
+            <Grid Grid.Row="2" BackgroundColor="#FFD1EEFC"></Grid>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" VerticalOptions="Center" Grid.Row="0" Margin="5">
+                <Image Source="Resourse/gibdd_logo.png" WidthRequest="50" HeightRequest="30"></Image>
+            </StackLayout>
+            <StackLayout Grid.Row="1" Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
+                <StackLayout Orientation="Horizontal">
+                    <StackLayout Orientation="Vertical">
+                        <StackLayout Orientation="Horizontal">
+                            <Label WidthRequest="110" Text="Выберите классификацию: "></Label>
+                            <Picker x:Name="DtpClassification" WidthRequest="200" >
+                                <Picker.Items>
+                                    <x:String>Столкновение</x:String>
+                                    <x:String>Опрокидывание</x:String>
+                                    <x:String>наезд на стоящее транспортное средство</x:String>
+                                    <x:String>наезд на препятствие</x:String>
+                                    <x:String>наезд на пешехода</x:String>
+                                    <x:String>наезд на велосипедиста</x:String>
+                                    <x:String>наезд на животное</x:String>
+                                    <x:String>иные виды ДТП</x:String>
+                                </Picker.Items>
+                            </Picker>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label WidthRequest="110" Text="Выберите 1 участника: "></Label>
+                            <Picker x:Name="DtpFirstDriver" WidthRequest="200" ></Picker>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label WidthRequest="110" Text="Выберите 2 участника: "></Label>
+                            <Picker x:Name="DtpSecondDriver" WidthRequest="200" ></Picker>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label WidthRequest="110" Text="Выберите 3 участника: "></Label>
+                            <Picker x:Name="DtpThirdDriver" WidthRequest="200" ></Picker>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label WidthRequest="110" Text="Выберите 4 участника: "></Label>
+                            <Picker x:Name="DtpFourthDriver" WidthRequest="200" ></Picker>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label WidthRequest="110" Text="Введите адресную информацию: "></Label>
+                            <Entry x:Name="TboxAdressInfo" WidthRequest="200" ></Entry>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label WidthRequest="110" Text="Введите информацию о других объектах ДТП: "></Label>
+                            <Entry x:Name="TboxInfoOdjects" WidthRequest="200" ></Entry>
+                        </StackLayout>
+                       
+                        <StackLayout Orientation="Horizontal">
+                            <Label WidthRequest="110" Text="Коментарий: "></Label>
+                            <Entry x:Name="TboxComment" WidthRequest="200" ></Entry>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label WidthRequest="110" Text="Дата: "></Label>
+                            <DatePicker x:Name="DateDtp" WidthRequest="300"></DatePicker>
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical">
+                        <StackLayout Orientation="Horizontal">
+                            <Label WidthRequest="110" Text="Количество жертв в ДТП: "></Label>
+                            <Entry x:Name="TboxInfoZhertvi" WidthRequest="200" ></Entry>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label WidthRequest="110" Text="Автомобиль 1 участника: "></Label>
+                            <Picker x:Name="DtpFirstCar" WidthRequest="200" ></Picker>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label WidthRequest="110" Text="Автомобиль 2 участника: "></Label>
+                            <Picker x:Name="DtpSecondCar" WidthRequest="200" ></Picker>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label WidthRequest="110" Text="Автомобиль 3 участника: "></Label>
+                            <Picker x:Name="DtpThirdCar" WidthRequest="200" ></Picker>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label WidthRequest="110" Text="Автомобиль 4 участника: "></Label>
+                            <Picker x:Name="DtpFourthCar" WidthRequest="200" ></Picker>
+                        </StackLayout>
+                        <StackLayout Orientation="Vertical">
+                            
+                                <Image x:Name="Photo" HeightRequest="180" WidthRequest="240" BackgroundColor="Gray"/>
+
+                            <Button Margin="20" WidthRequest="200" HeightRequest="30" Text="Добавить изображение" x:Name="BtnAddImage"  Background="#FFE0A9AF" Clicked="BtnAddImage_Click"></Button>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                           
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+                <Button x:Name="BtnAddDtp" WidthRequest="200" HeightRequest="30" Margin="5" Background="#FFE0A9AF" Text="Добавить ДТП" Clicked="BtnAddDtp_Clicked"></Button>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
